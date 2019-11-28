@@ -29,4 +29,4 @@ var result =[
   } 
 ];
 
-list1.map(v => ({...v, greetings: `Hi ${firstName}, what do you like most about ${language}`}))
+list1.map(v => ({...v, greeting: `Hi ${v.firstName}, what do you like the most about ${v.language}?`}))

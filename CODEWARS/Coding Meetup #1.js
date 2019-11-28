@@ -1,3 +1,4 @@
+// https://www.codewars.com/kata/coding-meetup-number-1-higher-order-functions-series-count-the-number-of-javascript-developers-coming-from-europe
 // Coding Meetup #1 - Higher-Order Functions Series - Count the number of JavaScript developers coming from Europe
 
 // You will be given an array of objects (hashes in ruby) representing data about developers who have signed up to attend the coding meetup that you are organising for the first time.

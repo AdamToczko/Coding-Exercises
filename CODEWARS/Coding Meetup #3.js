@@ -15,3 +15,18 @@ var list1 = [
 ];
 // your function should return: 
 true
+
+function isRubyComing(list) {
+  const rubyDevelopers = list.filter(z => z.language == 'Ruby')
+  if(rubyDevelopers.length >=1){
+  return true}
+  else {
+  return false
+  }
+}
+
+// better option
+
+function isRubyComing(list) {
+  return (list.find(x=> x.language == 'Ruby') != undefined);
+}

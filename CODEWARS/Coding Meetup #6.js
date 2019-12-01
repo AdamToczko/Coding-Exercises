@@ -36,7 +36,7 @@ function isSameLanguage(list) {
   //or 
 
   function isSameLanguage(list) {
-    for (var i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
     if (list[0].language !== list[i].language) {
     return false;
     }

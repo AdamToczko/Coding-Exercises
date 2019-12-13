@@ -23,3 +23,10 @@ function getStudentsWithNamesAndAvgNote(students) {
     }
    )
 }
+
+// different solution 
+
+function getStudentsWithNamesAndAvgNote(students) {
+	return students.reduce((x,v)=>x.concat
+	({name: v.name, avgNote: (v.notes.length?v.notes[1]:0)}),[]);
+}

@@ -38,3 +38,22 @@
 //     ]
 //   }
 // ]
+
+function getGroupsWithStudents(groups, students) {
+    return groups.map(group => {
+        return {
+          id: group.id,
+          name: group.name,
+          students: group.studentIds.map(id => students.find(student => id === student.id))
+            }
+        })
+    }
+
+    // other way
+
+const getGroupsWithStudents = (groups, students) =>
+  groups.map(({ id, name, studentIds }) => ({
+    id,
+    name,
+    students: studentIds.map(id => students.find(student => student.id === id)),
+  }));

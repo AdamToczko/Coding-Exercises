@@ -18,3 +18,7 @@ function isValidWalk(walk) {
     const east = walk.filter(direction => direction === 'e').length
     return walk.length === 10 && north === south && west === east
   }
+
+  // shorter solution 
+
+  

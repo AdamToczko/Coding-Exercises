@@ -14,7 +14,7 @@
 // If prop does not correspond to any valid properties of a contact found to match name then return "No such property".
 
 //Setup
-var contacts = [
+let contacts = [
     {
         "firstName": "Akira",
         "lastName": "Laine",

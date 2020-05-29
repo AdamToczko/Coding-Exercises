@@ -26,3 +26,17 @@ function completeSeries(arr) {
        return newArr
     }
   }
+
+  // other way but without deep equality
+
+
+function completeSeries(arr) {
+  const max = Math.max(...arr)
+  const newArr = arr.filter((v,i) => arr.indexOf(v) === i)
+  for ( let i = 0; i < max; i++ ) {
+      if ( newArr.indexOf(i) < 0 ) {
+          newArr.push( i );
+      }
+  }
+  return newArr
+  }

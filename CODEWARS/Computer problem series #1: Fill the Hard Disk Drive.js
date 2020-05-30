@@ -31,3 +31,25 @@ function save(sizes, hd) {
         }
         return sizes.length
 }
+
+//other solution
+
+function save(sizes, hd) {
+    let i = -1;
+    while (hd >=0) {
+      hd -= sizes.shift();
+      i++;
+    }
+    return i;
+}
+
+  // and another 
+
+function save(sizes, hd) {
+    let result = 0;
+    sizes.reduce((acc, curr) => {
+        if ((acc += curr) <= hd) result += 1;
+        return acc;
+    }, 0);
+    return result;
+}

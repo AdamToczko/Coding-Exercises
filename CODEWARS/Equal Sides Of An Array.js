@@ -30,9 +30,10 @@
 // If you are given an array with multiple answers, return the lowest correct index.
 
 function findEvenIndex(arr) {
-    for (let i = 0; i < arr.length; i++) {
-      if (sum(arr.slice(0, i)) === sum(arr.slice(i + 1))) return i
-    }
-    return -1
+  for (let i = 0; i < arr.length; i++) {
+    if (sum(arr.slice(0, i)) === sum(arr.slice(i + 1))) return i;
   }
-  const sum = arr => arr.reduce((acc, x) => acc + x, 0)
+  return -1;
+}
+
+const sum = (arr) => arr.reduce((acc, x) => acc + x, 0);

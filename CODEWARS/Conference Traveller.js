@@ -52,3 +52,15 @@ function conferencePicker(citiesVisited, citiesOffered) {
     "No worthwhile conferences this year!"
   );
 }
+
+
+// another way with for of loop
+
+function conferencePicker (citiesVisited, citiesOffered) {
+    for (let elem of citiesOffered){
+      if(!citiesVisited.includes(elem)){
+        return elem;
+      }
+    }
+    return 'No worthwhile conferences this year!';
+  }

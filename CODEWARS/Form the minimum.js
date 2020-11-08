@@ -24,3 +24,12 @@ function minValue(values){
     const string = noDuplicates.sort().join('')
     return parseInt(string)
   }
+
+  // another solution
+  function minValue(values){
+    const n = values
+      .filter((e, i, arr) => arr.indexOf(e) === i)
+      .sort()
+      .join('');
+    return Number(n);
+  }

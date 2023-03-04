@@ -8,14 +8,52 @@
 // For example, given the following list:
 
 var list1 = [
-  { firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'JavaScript' },
-  { firstName: 'Maia', lastName: 'S.', country: 'Tahiti', continent: 'Oceania', age: 28, language: 'JavaScript' },
-  { firstName: 'Shufen', lastName: 'L.', country: 'Taiwan', continent: 'Asia', age: 35, language: 'HTML' },
-  { firstName: 'Sumayah', lastName: 'M.', country: 'Tajikistan', continent: 'Asia', age: 30, language: 'CSS' }
+  {
+    firstName: 'Noah',
+    lastName: 'M.',
+    country: 'Switzerland',
+    continent: 'Europe',
+    age: 19,
+    language: 'JavaScript',
+  },
+  {
+    firstName: 'Maia',
+    lastName: 'S.',
+    country: 'Tahiti',
+    continent: 'Oceania',
+    age: 28,
+    language: 'JavaScript',
+  },
+  {
+    firstName: 'Shufen',
+    lastName: 'L.',
+    country: 'Taiwan',
+    continent: 'Asia',
+    age: 35,
+    language: 'HTML',
+  },
+  {
+    firstName: 'Sumayah',
+    lastName: 'M.',
+    country: 'Tajikistan',
+    continent: 'Asia',
+    age: 30,
+    language: 'CSS',
+  },
 ];
 
-
-
 function countDevelopers(list1) {
-    return list1.filter(z => z.continent == 'Europe' && z.language == 'JavaScript').length
-  }
+  return list1.filter(
+    (z) => z.continent == 'Europe' && z.language == 'JavaScript'
+  ).length;
+}
+
+function countDevelopers1(list) {
+  return list.reduce(
+    (count, developer) =>
+      developer.continent === 'Europe' && developer.language == 'JavaScript'
+        ? ++count
+        : count,
+    0
+  );
+}

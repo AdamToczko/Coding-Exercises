@@ -9,24 +9,48 @@
 // For example, given the following input array:
 
 var list1 = [
-  { firstName: 'Emma', lastName: 'Z.', country: 'Netherlands', continent: 'Europe', age: 29, language: 'Ruby' },
-  { firstName: 'Piotr', lastName: 'B.', country: 'Poland', continent: 'Europe', age: 128, language: 'Javascript' },
-  { firstName: 'Jayden', lastName: 'P.', country: 'Jamaica', continent: 'Americas', age: 42, language: 'JavaScript' }
+  {
+    firstName: 'Emma',
+    lastName: 'Z.',
+    country: 'Netherlands',
+    continent: 'Europe',
+    age: 29,
+    language: 'Ruby',
+  },
+  {
+    firstName: 'Piotr',
+    lastName: 'B.',
+    country: 'Poland',
+    continent: 'Europe',
+    age: 128,
+    language: 'Javascript',
+  },
+  {
+    firstName: 'Jayden',
+    lastName: 'P.',
+    country: 'Jamaica',
+    continent: 'Americas',
+    age: 42,
+    language: 'JavaScript',
+  },
 ];
-// your function should return: 
-true
+// your function should return:
+true;
 
 function isRubyComing(list) {
-  const rubyDevelopers = list.filter(z => z.language == 'Ruby')
-  if(rubyDevelopers.length >=1){
-  return true}
-  else {
-  return false
+  const rubyDevelopers = list.filter((z) => z.language == 'Ruby');
+  if (rubyDevelopers.length >= 1) {
+    return true;
+  } else {
+    return false;
   }
 }
 
 // better option
 
 function isRubyComing(list) {
-  return (list.find(x=> x.language == 'Ruby') != undefined);
+  return list.find((x) => x.language == 'Ruby') != undefined;
 }
+
+// best
+return list.some((developer) => developer.language === 'Ruby');
